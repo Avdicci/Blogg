@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZejdaGram</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <header class="header">
+        <h1 id="titles">--ZejdaGram--</h1>
+        <a href="/posts/new">Nytt Inlägg</a>
+    </header>
+    <hr />
+    <div class="main-content">
+        <div class="content">
+            <h2>Alla inlägg</h2>
+            <div class="content-items">
+                <ul>
+                    <% posts.forEach((post, index) => { %>
+                    <li>
+                        <a href="/posts/<%= index %>"><%= post.title %></a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <!-- Man kan använda denna kod om man vill ha extra länkar i sin bloggsida-->
+        <!-- <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div> -->
+    </footer>
+</body>
+</html>

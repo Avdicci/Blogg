@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redigera <%= post.title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Redigera inlägg</h1>
+    </div>
+    <div class="content">
+      <form action="/posts/<%= post.id %>?_method=PUT" method="post">
+        <label for="title">Titel:</label><br />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value="<%= post.title %>"
+        /><br />
+        <label for="content">Innehåll:</label><br />
+        <textarea id="content" name="content"><%= post.content %></textarea
+        ><br />
+        <button type="submit">Uppdatera inlägg</button>
+      </form>
+    </div>
+    <a href="/">Tillbaka till startsidan</a>
+
+    
+
+  </body>
+</html>
